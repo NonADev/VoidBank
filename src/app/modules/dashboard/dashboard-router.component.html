@@ -1,0 +1,2 @@
+<login *ngIf="currentPage === 0">oi</login>
+<dashboard-home *ngIf="currentPage === 1" [atualizaPasso]="this.changeCurrentPage.bind(this)"></dashboard-home>
