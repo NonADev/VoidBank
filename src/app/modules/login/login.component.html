@@ -1,13 +1,21 @@
 <div class="fundo ocupacaoTelaTotal centraliza">
-    <mat-card class="caixaPrincipal">
-        <mat-form-field>
-            <mat-label>e-mail</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>senha</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-        <button mat-raised-button color="primary">LOGIN</button>
+    <mat-card class="card">
+        <div>
+            <div class="circulo circuloAuxiliar">
+            </div>
+            <div class="circulo circuloPosicao circuloPrincipal">                
+            </div>
+        </div>
+        <div class="caixaPrincipal">
+            <mat-form-field style="width: 100%; margin-top: 40px; margin-bottom: 20px;">
+                <mat-label>e-mail</mat-label>
+                <input matInput type="email" maxlength="77">
+            </mat-form-field>
+            <mat-form-field style="width: 100%;">
+                <mat-label>senha</mat-label>
+                <input matInput type="password" maxlength="20">
+            </mat-form-field>
+            <button class="botaoADireita" mat-raised-button color="primary">LOGIN</button>
+        </div>
     </mat-card>
 </div>

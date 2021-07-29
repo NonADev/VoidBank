@@ -1,0 +1,67 @@
+.fundo {
+    background-color: #7CF7A7;
+}
+
+.ocupacaoTelaTotal {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.centraliza {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    height: 250px;
+    margin: 0 !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixaPrincipal {
+    width: 200px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.input100 {
+    width: 100%;
+}
+
+.botaoADireita {
+    overflow: hidden; 
+    clear: both; 
+    margin-left: auto; 
+    margin-right: 0;
+}
+
+.circuloPosicao {
+    margin-top: -55px !important;
+    position: fixed; 
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.circuloAuxiliar {
+    margin-top: -55px !important;
+    position: fixed; 
+    left: 50%;
+    transform: translate(-65%, 0);
+    background-color : lighten(#1b2f23, 15%);
+}
+
+.circuloPrincipal {    
+    background-color : lighten(#1b2f23, 30%);
+    background-image: url('../../../favicon.ico');
+}
+
+.circulo {
+    width: 80px; 
+    height: 80px; 
+    border-radius: 35%;
+}
