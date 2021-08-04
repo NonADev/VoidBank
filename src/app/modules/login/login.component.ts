@@ -12,6 +12,7 @@ export class LoginComponent extends AbstractComponent {
 
 	onClickLogin(): void {
 		console.warn('\'onClickLogin\' Method not implemented.');
+		console.log(LoginComponent.passwordIsValid(this.senha.toString()));
 	}
 
 	onClickForgotPassword(): void {
