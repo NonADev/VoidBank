@@ -1,15 +1,24 @@
+import { AbstractComponent } from './../../shared/components/abstract-component.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+	selector: 'login',
+	templateUrl: './login.component.html',
+	styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent extends AbstractComponent {
+	public email: String = "";
+	public senha: String = "";
 
-  constructor() { }
+	onClickLogin(): void {
+		console.warn('\'onClickLogin\' Method not implemented.');
+	}
 
-  ngOnInit(): void {
-  }
+	onClickForgotPassword(): void {
+		console.warn('\'onClickForgotPassword\' Method not implemented.');
+	}
 
+	ngOnInit(): void {
+		console.warn('\'ngOnInit\' Method not implemented.');
+	}
 }

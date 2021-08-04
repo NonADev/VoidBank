@@ -2,17 +2,21 @@ import { AbstractComponent } from './../../shared/components/abstract-component.
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'Dashboard-router',
-  templateUrl: './dashboard-router.component.html'
+	selector: 'Dashboard-router',
+	templateUrl: './dashboard-router.component.html'
 })
 export class DashboardRouterComponent extends AbstractComponent {
-  currentPage: number = 0;
+	currentPage: number = 0;
 
-  constructor() { 
-    super();
-  }
+	constructor() {
+		super();
+	}
 
-  public changeCurrentPage(newPage: number): void{
-    this.currentPage = newPage;
-  }
+	public changeCurrentPage(newPage: number): void {
+		this.currentPage = newPage;
+	}
+
+	ngOnInit(): void {
+		console.warn('\'ngOnInit\' Method not implemented.');
+	}
 }

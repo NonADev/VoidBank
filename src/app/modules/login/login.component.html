@@ -1,21 +1,24 @@
 <div class="fundo ocupacaoTelaTotal centraliza">
-    <mat-card class="card">
-        <div>
-            <div class="circulo circuloAuxiliar">
-            </div>
-            <div class="circulo circuloPosicao circuloPrincipal">                
-            </div>
-        </div>
-        <div class="caixaPrincipal">
-            <mat-form-field style="width: 100%; margin-top: 40px; margin-bottom: 20px;">
-                <mat-label>e-mail</mat-label>
-                <input matInput type="email" maxlength="77">
-            </mat-form-field>
-            <mat-form-field style="width: 100%;">
-                <mat-label>senha</mat-label>
-                <input matInput type="password" maxlength="20">
-            </mat-form-field>
-            <button class="botaoADireita" mat-raised-button color="primary">LOGIN</button>
-        </div>
-    </mat-card>
+	<mat-card class="card">
+		<div>
+			<div class="circulo circuloAuxiliar">
+			</div>
+			<div class="circulo circuloPosicao circuloPrincipal">
+			</div>
+		</div>
+		<div class="caixaPrincipal">
+			<mat-form-field class="textFieldEmail w100p">
+				<mat-label>e-mail</mat-label>
+				<input [(ngModel)]="email" matInput type="email" maxlength="77">
+			</mat-form-field>
+			<mat-form-field class="w100p">
+				<mat-label>senha</mat-label>
+				<input [(ngModel)]="senha" matInput type="password" maxlength="20">
+			</mat-form-field>
+			<div class="caixaBotoes w100p">
+				<button (click)="onClickLogin()" class="botaoADireita" mat-raised-button color="primary">LOGIN</button>
+			</div>
+			<button (click)="onClickForgotPassword()" mat-button>Esqueceu sua senha?</button>
+		</div>
+	</mat-card>
 </div>

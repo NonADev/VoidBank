@@ -8,11 +8,11 @@
 @import 'app/shared/themes/thema_void.scss';
 
 // specify theme class eg: <body class="my-theme"> ... </body>
-.theme {  
+.theme {
   // use our theme with angular-material-theme mixin
   @include angular-material-theme($theme);
 }
-.altTheme {  
+.altTheme {
     // use our theme with angular-material-theme mixin
     @include angular-material-theme($altTheme);
   }
