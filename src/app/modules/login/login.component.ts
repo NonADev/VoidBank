@@ -1,5 +1,6 @@
 import { AbstractComponent } from './../../shared/components/abstract-component.component';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Input } from '@angular/core';
 
 @Component({
 	selector: 'login',
@@ -7,12 +8,15 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./login.component.scss']
 })
 export class LoginComponent extends AbstractComponent {
+	@Input() public atualizaPasso!: (pagina: number) => void;
+
 	public email: String = "";
 	public senha: String = "";
 
 	onClickLogin(): void {
-		console.warn('\'onClickLogin\' Method not implemented.');
-		console.log(LoginComponent.passwordIsValid(this.senha.toString()));
+		if(LoginComponent.passwordIsValid(this.senha.toString()).valid) {
+			this.atualizaPasso(1);
+		}
 	}
 
 	onClickForgotPassword(): void {
