@@ -17,5 +17,13 @@
     @include angular-material-theme($altTheme);
   }
 
+.mat-error {
+	color: #f44336;
+}
+
+.mb5 {
+	margin-bottom: 5px !important;
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

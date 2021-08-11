@@ -6,14 +6,17 @@
 			<div class="circulo circuloPosicao circuloPrincipal">
 			</div>
 		</div>
-		<div class="caixaPrincipal">
+		<div class="caixaPrincipal" [formGroup]="this.loginForm">
 			<mat-form-field class="textFieldEmail w100p">
 				<mat-label>e-mail</mat-label>
-				<input [(ngModel)]="email" matInput type="email" maxlength="77">
+				<input formControlName="email" matInput type="email" maxlength="77">
+				<mat-error *ngIf="this.loginForm.get('email')?.touched || this.loginForm.get('email')?.hasError('email')">Please enter a valid email address</mat-error>
 			</mat-form-field>
-			<mat-form-field class="w100p">
+			<mat-form-field class="w100p mb5">
 				<mat-label>senha</mat-label>
-				<input [(ngModel)]="senha" matInput type="password" maxlength="20">
+				<input formControlName="senha" matInput type="password" maxlength="20">
+				<mat-error *ngIf="this.loginForm.get('senha')?.touched && this.loginForm.get('senha')?.hasError('required')">Please enter a valid password</mat-error>
+				<mat-error *ngIf="this.loginForm.get('senha')?.touched && this.loginForm.get('senha')?.hasError('minlength')">Password char minimum 8</mat-error>
 			</mat-form-field>
 			<div class="caixaBotoes w100p">
 				<button (click)="onClickLogin()" class="botaoADireita" mat-raised-button color="primary">LOGIN</button>

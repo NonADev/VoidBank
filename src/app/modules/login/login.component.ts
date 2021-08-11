@@ -1,3 +1,5 @@
+import { Account } from './../../shared/components/account.component';
+import { FormControl, Validators, FormBuilder } from '@angular/forms';
 import { AbstractComponent } from './../../shared/components/abstract-component.component';
 import { Component } from '@angular/core';
 import { Input } from '@angular/core';
@@ -8,13 +10,26 @@ import { Input } from '@angular/core';
 	styleUrls: ['./login.component.scss']
 })
 export class LoginComponent extends AbstractComponent {
+	@Input() public account!: Account;
 	@Input() public atualizaPasso!: (pagina: number) => void;
 
-	public email: String = "";
-	public senha: String = "";
+	public loginForm = this.fb.group({
+		'email': new FormControl('', [
+			Validators.required,
+			Validators.email
+		]),
+		'senha': new FormControl('', [
+			Validators.required,
+			Validators.minLength(8)
+		])
+	});
+
+	constructor(private fb: FormBuilder) {
+		super();
+	}
 
 	onClickLogin(): void {
-		if(LoginComponent.passwordIsValid(this.senha.toString()).valid) {
+		if (this.loginForm.valid) {
 			this.atualizaPasso(1);
 		}
 	}

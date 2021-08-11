@@ -1,5 +1,7 @@
 .fundo {
 	background-color: #7cf7a7;
+	background-image: url('../../shared/images/wickedbackground.svg');
+	background-size: cover;
 }
 
 .ocupacaoTelaTotal {
@@ -19,6 +21,10 @@
 	margin: 0 !important;
 	align-items: center;
 	justify-content: center;
+	/**
+	* TODO: Caso veja que fique atrativo adicionar fundo com backgroud-image
+	* background-image: url('../../shared/images/chalkboard.jpg');
+	*/
 }
 
 .caixaPrincipal {
@@ -52,8 +58,11 @@
 }
 
 .circuloPrincipal {
-	background-color: lighten(#1b2f23, 30%);
-	background-image: url("../../../favicon.ico");
+	background-color: lighten(#1b2f23, 40%);
+	background-image: url("../../shared/images/kisspng-cardboard-box-logo-clip-art-box-symbol-5b4f96d6760c64.7845641515319426144835.png");
+	background-repeat: no-repeat;
+	background-size: 85%;
+	background-position: center;
 }
 
 .circulo {
